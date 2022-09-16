@@ -47,7 +47,7 @@ def ap_ping():
             ]
             })
             ap_session_id = str(ap_ping_command["session_id"])
-            time.sleep(5)
+            time.sleep(7)
             ap_ping_response = central.command(apiMethod="GET", apiPath="/troubleshooting/v1/devices/" + serial + "/export?session_id=" + ap_session_id)
             try:
                 ap_ping_msg = ap_ping_response['msg']
