@@ -71,6 +71,7 @@ def ap_ping():
                             print(serial + " " + ping_output_line)
                             ap_data.write(serial + " " + ping_output_line + "\n")
             except:
+                print(serial + " Did not respond...skipping")
                 pass
 
 
