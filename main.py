@@ -50,14 +50,25 @@ def ap_ping():
             time.sleep(7)
             ap_ping_response = central.command(apiMethod="GET", apiPath="/troubleshooting/v1/devices/" + serial + "/export?session_id=" + ap_session_id)
             try:
-                ap_ping_msg = ap_ping_response['msg']
-                for line in ap_ping_msg.splitlines()[::-1]:
-                    if "round-trip" in line:
-                        ping_output_line = line.strip()
-                        print(serial + " " + ping_output_line)
-                        ap_data.write(serial + " " + ping_output_line + "\n")
+                if (ap_ping_response.get("code")) == 200 :
+                    ap_ping_msg = ap_ping_response['msg']
+                    for line in ap_ping_msg.splitlines()[::-1]:
+                        if "round-trip" in line:
+                            ping_output_line = line.strip()
+                            print(serial + " " + ping_output_line)
+                            ap_data.write(serial + " " + ping_output_line + "\n")
+                else:
+                    time.sleep(7)
+                    ap_ping_response = central.command(apiMethod="GET", apiPath="/troubleshooting/v1/devices/" + serial + "/export?session_id=" + ap_session_id)
+                    ap_ping_msg = ap_ping_response['msg']
+                    for line in ap_ping_msg.splitlines()[::-1]:
+                        if "round-trip" in line:
+                            ping_output_line = line.strip()
+                            print(serial + " " + ping_output_line)
+                            ap_data.write(serial + " " + ping_output_line + "\n")
             except:
                 pass
+
 
 if __name__ == "__main__":
     print("--- Starting ---")
