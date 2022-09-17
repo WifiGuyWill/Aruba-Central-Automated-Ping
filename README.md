@@ -4,7 +4,7 @@ Script to automate the Ping test on APs in Aruba Central
 ```
 % python3 main.py apple.com
 --- Starting ---
-Starting Ping test to apple.com
+Ping test to apple.com
 CNKDKSM0RQ round-trip min/avg/max = 4.8/5.8/8.7 ms
 CNKDKSM0SC round-trip min/avg/max = 4.7/5.1/5.8 ms
 --- Finished ---
