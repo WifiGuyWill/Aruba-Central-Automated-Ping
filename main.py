@@ -44,7 +44,7 @@ def ap_ping():
                 "arguments": [
                     {
                     "name": "Host",
-                    "value": "apple.com"
+                    "value": host
                     }
                 ]
                 }
