@@ -9,6 +9,10 @@
 from pycentral.base import ArubaCentralBase
 import creds as creds
 import time
+import sys
+
+host = str(sys.argv[1])
+#host = apple.com
 
 central_info = creds.central_info
 central = ArubaCentralBase(central_info=central_info, ssl_verify=True)
