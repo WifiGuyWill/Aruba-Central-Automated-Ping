@@ -76,7 +76,7 @@ def ap_ping():
 
 if __name__ == "__main__":
     print("--- Starting ---")
-    print("Ping test to " + host)
+    print("Ping Test Results to " + host)
     inventory()
     ap_ping()
     print("--- Finished ---")
