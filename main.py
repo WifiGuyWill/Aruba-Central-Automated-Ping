@@ -74,7 +74,6 @@ def ap_ping():
                 print(serial + " Did not respond...skipping")
                 pass
 
-
 if __name__ == "__main__":
     print("Ping Test Results to " + host)
     print("--- Starting ---")
