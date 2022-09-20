@@ -1,6 +1,7 @@
 #added by Will
 dev/
 venv/
+temp/
 __pycache__/
 *.code-workspace
 .DS_Store
