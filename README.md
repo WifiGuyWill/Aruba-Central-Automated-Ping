@@ -17,8 +17,6 @@ Then execute the script with the host info 'python3 main.py apple.com'
 
 The script will first generate a valid API key, then create a list of every active AP in Central. It will then run the ping command to the host defined in the script. The output will be shown on the screen as the script executes and written to a file called 'ap_data.txt'.
 
->TODO: Add additional varificaion for ping command completion before executing GET export of the results.
-
 Please feel free to modify or provide any comments or feedback.
 
 Thank you - Will Smith
